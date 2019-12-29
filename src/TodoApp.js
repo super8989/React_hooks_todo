@@ -6,6 +6,8 @@ import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Grid from "@material-ui/core/Grid";
 
+import TodoList from "./TodoList";
+
 function TodoApp() {
 	const initialTodos = [
 		{ id: 1, task: "Clean fishtank", completed: false },
@@ -29,6 +31,7 @@ function TodoApp() {
 					<Typography color='inherit'>Todos with Hooks</Typography>
 				</Toolbar>
 			</AppBar>
+			<TodoList todos={todos} />
 		</Paper>
 	);
 }
