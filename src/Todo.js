@@ -1,7 +1,14 @@
 import React from "react";
 
-function Todo() {
-	return <li>I am todo</li>;
+import ListItem from "@material-ui/core/ListItem";
+import ListItemText from "@material-ui/core/ListItemText";
+
+function Todo({ task, completed }) {
+	return (
+		<ListItem>
+			<ListItemText>{task}</ListItemText>
+		</ListItem>
+	);
 }
 
 export default Todo;
