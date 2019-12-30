@@ -16,7 +16,7 @@ function TodoList(props) {
 					<>
 						<ListItem>
 							<ListItemText>
-								<Todo />
+								<Todo task={todo.task} key={todo.id} completed={completed} />
 							</ListItemText>
 						</ListItem>
 						<Divider />
