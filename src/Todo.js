@@ -14,10 +14,10 @@ function Todo({ task, completed }) {
 			<Checkbox tabIndex={-1} checked={completed} />
 			<ListItemText>{task}</ListItemText>
 			<ListItemSecondaryAction>
-				<IconButton>
+				<IconButton aria-labe='Delete'>
 					<DeleteIcon />
 				</IconButton>
-				<IconButton>
+				<IconButton aria-label='Edit'>
 					<EditIcon />
 				</IconButton>
 			</ListItemSecondaryAction>
