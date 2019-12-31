@@ -17,7 +17,7 @@ function Todo({ id, task, completed, removeTodo, toggleTodo, editTodo }) {
 	return (
 		<ListItem>
 			{isEditing ? (
-				<EditTodoForm editTodo={editTodo} id={id} />
+				<EditTodoForm editTodo={editTodo} id={id} task={task} />
 			) : (
 				<>
 					<Checkbox
