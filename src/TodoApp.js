@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import Typography from "@material-ui/core/Typography";
 import Paper from "@material-ui/core/Paper";
@@ -19,6 +19,10 @@ function TodoApp() {
 	];
 
 	const [todos, setTodos] = useState(initialTodos);
+
+	useEffect(() => {
+		alert("in use effect");
+	});
 
 	const addTodo = newTodoText => {
 		setTodos([...todos, { id: uuid(), task: newTodoText, completed: false }]);
