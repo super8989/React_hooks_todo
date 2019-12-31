@@ -12,11 +12,13 @@ import TodoList from "./TodoList";
 import TodoForm from "./TodoForm";
 
 function TodoApp() {
-	const initialTodos = [
+	const initialTodos = JSON.parse(window.localStorage.getItem("todos") || "[]");
+
+	/* const initialTodos = [
 		{ id: 1, task: "Clean fishtank", completed: false },
 		{ id: 2, task: "Wash car", completed: true },
 		{ id: 3, task: "Grow beard", completed: false }
-	];
+	]; */
 
 	const [todos, setTodos] = useState(initialTodos);
 
