@@ -21,8 +21,8 @@ function TodoApp() {
 	const [todos, setTodos] = useState(initialTodos);
 
 	useEffect(() => {
-		alert("in use effect");
-	});
+		window.localStorage.setItem("todos", JSON.stringify(todos));
+	}, [todos]);
 
 	const addTodo = newTodoText => {
 		setTodos([...todos, { id: uuid(), task: newTodoText, completed: false }]);
